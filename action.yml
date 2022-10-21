@@ -22,7 +22,7 @@ runs:
           path: {{ inputs.path }}
 
       - name: Get Deploy Access
-	id: deployAccess
+        id: deployAccess
         uses: fjogeleit/http-request-action@v1
         with:
           url: 'https://api.tourdeapp.cz/get-auth'
