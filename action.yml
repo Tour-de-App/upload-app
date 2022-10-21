@@ -17,7 +17,7 @@ runs:
       uses: actions/download-artifact@v3
       with:
         name: myimage
-        path: {{ inputs.path }}
+        path: {{ input.path }}
     - name: Get Deploy Access
       id: deployAccess
       uses: fjogeleit/http-request-action@v1
