@@ -17,7 +17,7 @@ runs:
       uses: actions/download-artifact@v3
       with:
         name: ${{ inputs.artifact_name }}
-        path: /tmp/to_uplod_image.tar
+        path: /tmp/to_upload
     - name: Get Deploy Access
       id: deployAccess
       uses: fjogeleit/http-request-action@v1
@@ -36,6 +36,6 @@ runs:
           IMAGE: ${{ fromJson(steps.deployAccess.outputs.response).name }}
       shell: bash
       run: |
-        docker load --input /tmp/to_uplod_image.tar
+        docker load --input /tmp/to_upload/*
         docker tag ${{ inputs.artifact_name }} $IMAGE
         docker push $IMAGE
