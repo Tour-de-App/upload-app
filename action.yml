@@ -10,7 +10,6 @@ inputs:
     required: true
 runs:
   using: 'composite'
-  runs-on: ubuntu-latest
   steps:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -34,6 +33,7 @@ runs:
     - name: Load and push image
       env:
           IMAGE: fromJson(steps.deployAccess.outputs.response).name
+      shell: bash
       run: |
         docker load --input /tmp/myimage.tar
         docker tag myimage $IMAGE
