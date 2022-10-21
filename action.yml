@@ -29,10 +29,10 @@ runs:
       uses: docker/login-action@v1
       with:
         username: tda-user
-        password: fromJson(steps.deployAccess.outputs.response).key
+        password: ${{ fromJson(steps.deployAccess.outputs.response).key }}
     - name: Load and push image
       env:
-          IMAGE: fromJson(steps.deployAccess.outputs.response).name
+          IMAGE: ${{ fromJson(steps.deployAccess.outputs.response).name }}
       shell: bash
       run: |
         docker load --input /tmp/to_uplod_image.tar
