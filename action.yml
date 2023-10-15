@@ -18,7 +18,7 @@ runs:
       id: deployAccess
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://auth.tda-8gb.rajnoha.eu/staging-auth'
+        url: 'https://auth.registry.rajnoha.eu/staging-auth'
         method: 'POST'
         data: '{"team_secret": "${{ inputs.team_secret }}"}'
     - name: Login to Docker Hub
