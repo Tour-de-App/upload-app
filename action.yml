@@ -1,5 +1,5 @@
 name: 'Upload app to TdA'
-description: ''
+description: 'Upload action for the NK of TdA24 competition – staging setting.'
 author: 'Student Cyber Games'
 inputs:
   image_name:
