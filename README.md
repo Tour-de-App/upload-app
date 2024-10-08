@@ -48,3 +48,12 @@ jobs:
 
 > [!CAUTION]
 > GitHub akce v tomto příkladu je nastavena tak, aby se spustila při každém commitu do větve `main`. Pokud pracujete na svém kódu pouze na větvi `main`, může se stát že využijete všechny svoje minuty na používání GitHub actions a akce už nepůjde spustit. Proto doporučujeme vývoj provádět na jiné větvy a pak využít pull request. Více informaci o tom jak používat Git můžete najít [zde](https://tourdeapp.cz/webinare/odevzdej-a-otestuj-git-github-a-testovaci-platforma)
+
+
+## ℹ️ Parametry
+
+| Vstup | Popis | Povinný |
+|-------|-------|---------|
+| `image_name` | Název Docker obrazu | Ano | 
+| `image_path` | Cesta k Docker obrazu | Ano | 
+| `access_token` | Přístupový token | Ano | 
