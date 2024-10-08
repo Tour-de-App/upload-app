@@ -38,8 +38,13 @@ jobs:
       - name: Upload to TdA
         uses: Tour-de-App/upload-app@tda-25
         with:
-          access_token: ${{ secrets.TEAM_TOKEN }}
+          access_token: ${{ secrets.ACCESS_TOKEN }}
           image_name: tda-generic
           image_path: /tmp/tda-generic.tar
 ```
-4. Vygenerujte si vlastní `TEAM_TOKEN`, a [nastavte](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) si ho jako secret v GitHub actions.
+4. Přejděta na [stránku pro vygenerování tokenu](https://odevzdavani.tourdeapp.cz/team-token) a ygenerujte si vlastní speciální token, kterým se ověříte oproti TdA registry.
+5. Token [nastavte](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) jako secret, s názvem `ACCESS_TOKEN` v GitHub actions.
+6. Pushněte nový commit do GitHubu, a v záložce _Actions_ si zobrazte stav vaší GitHub akce.
+
+> [!CAUTION]
+> GitHub akce v tomto příkladu je nastavena tak, aby se spustila při každém commitu do větve `main`. Pokud pracujete na svém kódu pouze na větvi `main`, může se stát že využijete všechny svoje minuty na používání GitHub actions a akce už nepůjde spustit. Proto doporučujeme vývoj provádět na jiné větvy a pak využít pull request. Více informaci o tom jak používat Git můžete najít [zde](https://tourdeapp.cz/webinare/odevzdej-a-otestuj-git-github-a-testovaci-platforma)
