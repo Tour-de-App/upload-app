@@ -55,14 +55,3 @@ jobs:
 | `image_path` | Cesta k Docker obrazu | Ano | 
 | `access_token` | Přístupový token | Ano |
 
-Hlavní opravy:
-1. "Přejděta" opraveno na "Přejděte"
-2. "ygenerujte" opraveno na "vygenerujte"
-3. Přidána čárka před "kterým" ve větě "vygenerujte si vlastní speciální token, kterým se ověříte"
-4. "secret, s názvem" opraveno na "secret s názvem"
-5. Přidána čárka před "že" ve větě "může se stát, že využijete"
-6. "větvy" opraveno na "větvi" ve větě "vývoj provádět na jiné větvi"
-7. "informaci" opraveno na "informací"
-8. Přidána čárka před "jak" ve větě "Více informací o tom, jak používat Git"
-
-Ostatní menší úpravy zahrnují interpunkci a formátování pro lepší čitelnost.
