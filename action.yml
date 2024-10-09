@@ -8,7 +8,7 @@ inputs:
   image_path:
     description: "Path of the docker image"
     required: true
-  access_token:
+  team_token:
     description: "Acces token"
     required: true
   base_domain:
@@ -24,13 +24,13 @@ runs:
       with:
         url: "https://authfish.${{ inputs.base_domain }}/container-info"
         method: "GET"
-        customHeaders: '{"x-tda-token": "${{ inputs.access_token }}"}'
+        customHeaders: '{"x-tda-token": "${{ inputs.team_token }}"}'
 
     - name: Load and push image
       env:
         IMAGE_NAME: ${{ fromJson(steps.deployAccess.outputs.response).image_name }}
         REGISTRY_URL: ${{ inputs.base_domain }}
-        REGISTRY_PASSWORD: ${{ inputs.access_token }}
+        REGISTRY_PASSWORD: ${{ inputs.team_token }}
       shell: bash
       run: |
         docker login $REGISTRY_URL -u tour-de-upload-app -p $REGISTRY_PASSWORD
