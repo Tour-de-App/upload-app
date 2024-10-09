@@ -35,12 +35,12 @@ jobs:
       - name: Upload to TdA
         uses: Tour-de-App/upload-app@tda-25
         with:
-          access_token: ${{ secrets.ACCESS_TOKEN }}
+          team_token: ${{ secrets.TEAM_TOKEN }}
           image_name: tda-generic
           image_path: /tmp/tda-generic.tar
 ```
 4. Přejděte na [stránku pro vygenerování tokenu](https://odevzdavani.tourdeapp.cz/team-token) a vygenerujte si vlastní speciální token, kterým se ověříte oproti TdA registry
-5. Token [nastavte](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) jako secret s názvem `ACCESS_TOKEN` v GitHub Actions
+5. Token [nastavte](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) jako secret s názvem `TEAM_TOKEN` v GitHub Actions
 6. Pushněte nový commit do GitHubu a v záložce *Actions* si zobrazte stav vaší GitHub akce
 
 
@@ -53,5 +53,5 @@ jobs:
 |-------|-------|---------|
 | `image_name` | Název Docker obrazu | Ano | 
 | `image_path` | Cesta k Docker obrazu | Ano | 
-| `access_token` | Přístupový token | Ano |
+| `team_token` | Přístupový token | Ano |
 
