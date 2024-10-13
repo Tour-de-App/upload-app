@@ -14,7 +14,7 @@ inputs:
   base_domain:
     description: Base domain for the registry and authfish
     required: false
-    default: "reg.tourdeapp.cz"
+    default: "registry.tourde.app"
 runs:
   using: "composite"
   steps:
