@@ -3,10 +3,10 @@ description: "Upload action for the Tour de App competition"
 author: "Student Cyber Games"
 inputs:
   image_name:
-    description: "Name of the docker image"
+    description: "Name of the Docker image"
     required: true
   image_path:
-    description: "Path of the docker image"
+    description: "Path to the Docker image"
     required: true
   team_token:
     description: "Acces token"
