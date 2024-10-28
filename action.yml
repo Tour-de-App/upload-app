@@ -1,6 +1,9 @@
 name: "Upload app to TdA"
 description: "Upload action for the Tour de App competition"
 author: "Student Cyber Games"
+branding:
+  color: orange
+  icon: server
 inputs:
   image_name:
     description: "Name of the Docker image"
