@@ -1,11 +1,11 @@
-![Frame 1](https://github.com/user-attachments/assets/4b8145b6-db05-415b-9d1c-511b88dfff83)
+![Upload APP logo(https://github.com/user-attachments/assets/4b8145b6-db05-415b-9d1c-511b88dfff83)
 
 GitHub akce pro nahrávání Docker obrazů do TdA registry.
 
 ## ❓ Jak se GitHub akce používá
 
 > [!TIP]
-> Pokud nechcete psát vlastní `Dockerfile`, můžete využít jednu z naších [šablon](https://github.com/orgs/Tour-de-App/repositories?type=source&q=template:true+archived:false)
+> Pokud nechcete psát vlastní `Dockerfile`, můžete využít jednu z naších [šablon](https://github.com/orgs/Tour-de-App/repositories?type=source&q=template:true+archived:false). A jestli jste se už s Dockerem setkali, tak můžete využít [šablony pouze s GitHub akcí](https://github.com/Tour-de-App/generic-boilerplate)
 
 1. Vytvořte si vlastní `Dockerfile`
 2. Ve složce `.github/workflows` vytvořte nový soubor `upload.yml`
@@ -39,7 +39,7 @@ jobs:
           image_name: tda-generic
           image_path: /tmp/tda-generic.tar
 ```
-4. Přejděte na [stránku pro vygenerování tokenu](https://odevzdavani.tourdeapp.cz/team-token) a vygenerujte si vlastní speciální token, kterým se ověříte oproti TdA registry
+4. Přejděte na [stránku pro vygenerování tokenu](https://odevzdavani.tourdeapp.cz/app/team-token) a vygenerujte si vlastní speciální token, kterým se ověříte oproti TdA registry
 5. Token [nastavte](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) jako secret s názvem `TEAM_TOKEN` v GitHub Actions
 6. Pushněte nový commit do GitHubu a v záložce *Actions* si zobrazte stav vaší GitHub akce
 
