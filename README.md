@@ -1,4 +1,4 @@
-![Upload APP logo(https://github.com/user-attachments/assets/4b8145b6-db05-415b-9d1c-511b88dfff83)
+![Upload APP logo](https://github.com/user-attachments/assets/4b8145b6-db05-415b-9d1c-511b88dfff83)
 
 GitHub akce pro nahrávání Docker obrazů do TdA registry.
 
@@ -22,8 +22,10 @@ jobs:
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v3
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+
       - name: Build
         uses: docker/build-push-action@v6.8.0
         with:
@@ -32,6 +34,7 @@ jobs:
           cache-to: type=gha,mode=max
           tags: tda-generic:latest
           outputs: type=docker,dest=/tmp/tda-generic.tar
+
       - name: Upload to TdA
         uses: Tour-de-App/upload-app@tda-25
         with:
